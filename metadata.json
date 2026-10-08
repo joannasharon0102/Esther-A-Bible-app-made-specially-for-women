@@ -1,0 +1,6 @@
+{
+  "name": "ESTHER - Women's Bible & Devotional",
+  "description": "A graceful, feminine Bible companion offering daily encouragement, prayer and scripture tracking, and devotional study plans.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

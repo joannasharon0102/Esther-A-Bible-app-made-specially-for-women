@@ -1,0 +1,127 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-scripture: 'Lora', Georgia, serif;
+  --font-script: 'Parisienne', cursive;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  
+  --color-blush-50: #FFF9F7;
+  --color-blush-100: #FFF0F2;
+  --color-blush-200: #FADCE0;
+  --color-blush-300: #F4C2C2;
+  --color-blush-400: #E8B4B8;
+  --color-blush-500: #D99B9F;
+  --color-blush-600: #B76E79;
+  
+  --color-rosegold-light: #F6D8CE;
+  --color-rosegold: #B76E79;
+  --color-rosegold-dark: #8A4854;
+  
+  --color-cream: #FFF8F0;
+  --color-cream-card: #FFFAF4;
+  --color-deeprose: #50212C;
+  --color-deeprose-text: #662E3B;
+}
+
+/* Custom Quilted Background Pattern */
+.bg-quilted-fabric {
+  background-color: #FFF8F0;
+  background-image: 
+    radial-gradient(#E8B4B8 0.75px, transparent 0.75px),
+    linear-gradient(45deg, rgba(232, 180, 184, 0.08) 25%, transparent 25%), 
+    linear-gradient(-45deg, rgba(232, 180, 184, 0.08) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, rgba(232, 180, 184, 0.08) 75%),
+    linear-gradient(-45deg, transparent 75%, rgba(232, 180, 184, 0.08) 75%);
+  background-size: 24px 24px, 48px 48px, 48px 48px, 48px 48px, 48px 48px;
+}
+
+/* Dark mode quilted fabric */
+.dark .bg-quilted-fabric {
+  background-color: #171013;
+  background-image: 
+    radial-gradient(#8A4854 0.75px, transparent 0.75px),
+    linear-gradient(45deg, rgba(183, 110, 121, 0.05) 25%, transparent 25%), 
+    linear-gradient(-45deg, rgba(183, 110, 121, 0.05) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, rgba(183, 110, 121, 0.05) 75%),
+    linear-gradient(-45deg, transparent 75%, rgba(183, 110, 121, 0.05) 75%);
+}
+
+/* Rose Gold Metallic Text Gradient */
+.text-rose-gold {
+  background: linear-gradient(135deg, #F3D0C7 0%, #C97A85 45%, #924B57 85%, #E5A8A0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-rose-gold-glow {
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8), 0 2px 8px rgba(183, 110, 121, 0.35);
+}
+
+/* Leather Texture Overlay */
+.leather-grain {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.18) 1px, transparent 0),
+                    radial-gradient(rgba(140, 74, 85, 0.08) 1px, transparent 0);
+  background-size: 6px 6px, 8px 8px;
+  background-position: 0 0, 3px 3px;
+}
+
+/* Embossed Box Shadow */
+.embossed-border {
+  box-shadow: 
+    inset 1px 1px 2px rgba(255, 255, 255, 0.8),
+    inset -1px -1px 2px rgba(140, 74, 85, 0.3),
+    0 10px 25px -5px rgba(183, 110, 121, 0.25);
+}
+
+.leather-spine {
+  box-shadow: 
+    inset 12px 0 16px -8px rgba(90, 37, 51, 0.4),
+    inset -4px 0 8px -3px rgba(255, 255, 255, 0.4);
+}
+
+/* Mobile viewport and scrollbars */
+html, body {
+  overscroll-behavior-y: none;
+  -webkit-tap-highlight-color: transparent;
+  font-family: var(--font-sans);
+}
+
+/* Hide scrollbar for tabs / chips */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Subtle animations */
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(3deg); }
+}
+
+@keyframes sparklePulse {
+  0%, 100% { opacity: 0.2; transform: scale(0.85); }
+  50% { opacity: 0.9; transform: scale(1.15); }
+}
+
+@keyframes fairyDust {
+  0% { transform: translateY(0) translateX(0); opacity: 0; }
+  25% { opacity: 0.7; }
+  75% { opacity: 0.5; }
+  100% { transform: translateY(-70px) translateX(25px); opacity: 0; }
+}
+
+.animate-float-slow {
+  animation: floatSlow 7s ease-in-out infinite;
+}
+
+.animate-sparkle {
+  animation: sparklePulse 3s ease-in-out infinite;
+}
+
+.animate-fairy-dust {
+  animation: fairyDust 6s linear infinite;
+}

@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="leatherGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F7D6D9"/>
+      <stop offset="50%" stop-color="#E8B4B8"/>
+      <stop offset="100%" stop-color="#D99B9F"/>
+    </linearGradient>
+    <linearGradient id="roseGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F2D1C9"/>
+      <stop offset="35%" stop-color="#E5A69B"/>
+      <stop offset="70%" stop-color="#B76E79"/>
+      <stop offset="100%" stop-color="#8C4A55"/>
+    </linearGradient>
+    <filter id="emboss" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="1" dy="2" stdDeviation="1.5" flood-color="#8C4A55" flood-opacity="0.3"/>
+      <feDropShadow dx="-1" dy="-1" stdDeviation="1" flood-color="#FFFFFF" flood-opacity="0.7"/>
+    </filter>
+  </defs>
+  <!-- Background with subtle leather grain feel -->
+  <rect width="512" height="512" rx="108" fill="url(#leatherGrad)"/>
+  
+  <!-- Outer Filigree Border -->
+  <rect x="36" y="36" width="440" height="440" rx="72" fill="none" stroke="url(#roseGold)" stroke-width="4" stroke-dasharray="12 6" opacity="0.8"/>
+  <rect x="48" y="48" width="416" height="416" rx="60" fill="none" stroke="url(#roseGold)" stroke-width="2" filter="url(#emboss)"/>
+  
+  <!-- Corner Floral Filigrees -->
+  <!-- Top Left -->
+  <path d="M 64 120 C 64 80 80 64 120 64 C 95 85 85 95 64 120 Z" fill="url(#roseGold)" opacity="0.85"/>
+  <circle cx="88" cy="88" r="6" fill="url(#roseGold)"/>
+  <!-- Top Right -->
+  <path d="M 448 120 C 448 80 432 64 392 64 C 417 85 427 95 448 120 Z" fill="url(#roseGold)" opacity="0.85"/>
+  <circle cx="424" cy="88" r="6" fill="url(#roseGold)"/>
+  <!-- Bottom Left -->
+  <path d="M 64 392 C 64 432 80 448 120 448 C 95 427 85 417 64 392 Z" fill="url(#roseGold)" opacity="0.85"/>
+  <circle cx="88" cy="424" r="6" fill="url(#roseGold)"/>
+  <!-- Bottom Right -->
+  <path d="M 448 392 C 448 432 432 448 392 448 C 417 427 427 417 448 392 Z" fill="url(#roseGold)" opacity="0.85"/>
+  <circle cx="424" cy="424" r="6" fill="url(#roseGold)"/>
+
+  <!-- Center Medallion -->
+  <circle cx="256" cy="256" r="140" fill="#FFF9F5" opacity="0.4" stroke="url(#roseGold)" stroke-width="3" filter="url(#emboss)"/>
+  <circle cx="256" cy="256" r="128" fill="none" stroke="url(#roseGold)" stroke-width="1.5" stroke-dasharray="6 4"/>
+
+  <!-- Esther Crown & Cross Symbol -->
+  <!-- Delicate Queen Crown -->
+  <path d="M 196 210 L 210 240 L 256 195 L 302 240 L 316 210 L 326 260 L 186 260 Z" fill="url(#roseGold)" filter="url(#emboss)"/>
+  <circle cx="196" cy="204" r="4.5" fill="url(#roseGold)"/>
+  <circle cx="256" cy="189" r="5.5" fill="url(#roseGold)"/>
+  <circle cx="316" cy="204" r="4.5" fill="url(#roseGold)"/>
+  
+  <!-- Graceful Cross underneath -->
+  <path d="M 252 268 H 260 V 336 H 252 Z" fill="url(#roseGold)" filter="url(#emboss)"/>
+  <path d="M 234 286 H 278 V 294 H 234 Z" fill="url(#roseGold)" filter="url(#emboss)"/>
+
+  <!-- Sparkles -->
+  <path d="M 256 140 Q 256 155 271 155 Q 256 155 256 170 Q 256 155 241 155 Q 256 155 256 140 Z" fill="url(#roseGold)"/>
+  <path d="M 160 256 Q 160 266 170 266 Q 160 266 160 276 Q 160 266 150 266 Q 160 266 160 256 Z" fill="url(#roseGold)"/>
+  <path d="M 352 256 Q 352 266 362 266 Q 352 266 352 276 Q 352 266 342 266 Q 352 266 352 256 Z" fill="url(#roseGold)"/>
+</svg>
